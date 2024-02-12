@@ -1,0 +1,71 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    z-index: 0;
+    width: 100vh;
+    height: 100vh;
+    background: conic-gradient(#fb5dad, #55fb9f, #b97aff, #55fb9f, #fb5dad);
+    border-radius: 50%;
+    overflow: hidden;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.box2 {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 100vh;
+    height: 100vh;
+    background: radial-gradient(#050210 24%, transparent 25%, transparent 29%, rgb(5, 2, 16, 0.5) 29%, rgb(5, 2, 16, 0.8) 34%, rgb(0, 0, 0) 37%);
+    mix-blend-mode: multiply;
+    overflow: hidden;
+}
+
+.point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35%;
+    height: 35%;
+    background-color: rgb(15, 15, 15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: expand;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes expand {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 35%;
+        height: 35%;
+    }
+}
